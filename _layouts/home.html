@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<div class="home">
+  <h1 class="page-heading">随笔</h1>
+
+  {% if site.posts.size > 0 %}
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li class="post-item">
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      {% if post.excerpt %}
+      <p class="post-excerpt">{{ post.excerpt | strip_html | normalize_whitespace }}</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="post-empty">还没有文章，去 <code>_posts/</code> 写下第一篇随笔吧。</p>
+  {% endif %}
+</div>

@@ -1,0 +1,15 @@
+# Jekyll 构建产物与本地缓存
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler / Ruby
+.bundle/
+vendor/
+Gemfile.lock
+
+# Sass 缓存
+.sass-cache/
+
+# 系统文件
+.DS_Store

@@ -1,0 +1,35 @@
+# 站点基本信息
+title: 随笔
+description: 记录日常与思考的个人随笔站
+url: "https://shenxingda666-commits.github.io"
+baseurl: ""
+lang: zh-CN
+timezone: Asia/Shanghai
+
+# 文章链接格式：/2026/09/01/标题/
+permalink: /:year/:month/:day/:title/
+
+# 构建配置
+markdown: kramdown
+highlighter: rouge
+
+# 插件（均为 GitHub Pages 白名单插件）
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# 默认布局：_posts 下的文章默认使用 post 布局
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: post
+
+# 排除出站点构建的文件
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .gitignore
